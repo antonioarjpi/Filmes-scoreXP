@@ -1,0 +1,39 @@
+header {
+    height: 60px;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+}
+
+.movie-nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.movie-nav-content h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.movie-contact-container {
+    display: flex;
+    align-items: center;
+}
+
+.movie-contact-link {
+    margin: 0 0 0 5px;
+    font-size: 17px;
+}
+
+.movie-contact-container i{
+    font-size: 25px; 
+}
+
+.movie-contact-container:hover{
+    transition:color 0.5s;
+    text-decoration: none;
+    color:#2F1C6A;
+}
