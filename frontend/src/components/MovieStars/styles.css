@@ -1,0 +1,11 @@
+.movie-stars-container {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    color: #F6CA2A;
+}
+
+.movie-stars-container i{
+    width: 22px;
+    height: auto;
+}
