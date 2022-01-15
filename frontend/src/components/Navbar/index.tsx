@@ -1,4 +1,5 @@
 import { ReactComponentElement } from "react";
+import Logo from 'assets/img/Logo.png'
 import "./styles.css"
 
 function Navbar(){
@@ -8,7 +9,10 @@ function Navbar(){
 <header>
     <nav className="container">
         <div className="movie-nav-content">
-            <h1>Filmes ScoreXP</h1>
+            <a href="/">
+                <img src={Logo}  alt="fireSpot"/>
+            </a>
+            
             <a href="https://github.com/antonioarjpi" target="_blank" rel="noreferrer">
                 <div className="movie-contact-container">
                     <i className="fa fa-github"></i>

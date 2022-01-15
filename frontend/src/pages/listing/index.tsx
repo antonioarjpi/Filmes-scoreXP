@@ -3,7 +3,9 @@ import MovieCard from "../../components/MovieCard"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "utils/request";
-import { MoviePage } from "types/movie"
+import { MoviePage } from "types/movie";
+import About from "components/About";
+import Paralax from "components/Paralax";
 
 
 function Listing(){
@@ -23,7 +25,7 @@ function Listing(){
     })
     
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=50&page=${pageNumber}`)
+        axios.get(`${BASE_URL}/movies?size=8&page=${pageNumber}`)
         .then(response => {
             const data = response.data as MoviePage;
             setPage(data);
@@ -31,11 +33,17 @@ function Listing(){
         })
     }, [pageNumber]);
 
+    const handlePageChange = (newPageNumber : number ) => {
+        setPageNumber(newPageNumber);
+    }
+
     
     return(
         <>      
-            <Pagination />
-            
+        <body>
+        <Paralax />
+            <Pagination page={page} onChange={handlePageChange}/>
+
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
@@ -44,7 +52,9 @@ function Listing(){
                         </div>
                     ))}
                 </div>
+                <About />
             </div>
+            </body>
             
 
             

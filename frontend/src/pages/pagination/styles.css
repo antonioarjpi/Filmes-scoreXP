@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .movie-pagination-box {
@@ -10,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .movie-pagination-box form {
@@ -20,32 +22,28 @@
 .movie-pagination-button {
     width: 40px;
     height: 40px;
+    font-size: 25px;
     border-radius: 4px;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--color-primary);
     cursor: pointer;
-}
-
-.movie-pagination-button svg {
-    filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
+    background-color: var(--color-primary);
+    color: #fff;
+    
 }
 
 .movie-pagination-button:disabled {
-    border: 1px solid #c2c2c2;
     cursor: unset;
-}
-
-.movie-pagination-button:disabled svg {
-    filter: none;
+    color: rgb(90, 89, 89);
 }
 
 .movie-pagination-container p {
+    color: #fff;
     margin: 0;
     font-size: 12px;
-    color: var(--color-primary);
+    
 }
 
 .movie-flip-horizontal {

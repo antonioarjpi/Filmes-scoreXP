@@ -3,8 +3,6 @@ import { Movie } from '../../types/movie';
 import FormCard from '../../components/FormCard'
 
 
-
-
 function Form(){
 
     const params = useParams();

@@ -1,0 +1,20 @@
+.about-title{
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    word-spacing: 0px;
+    color:  #ffffff;
+    margin-bottom: 1.1rem;
+    margin-top: 7.1rem;
+}
+
+.about-sub-title{
+    display: grid;
+    font-size: 13px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    word-spacing: 0px;
+    color:  #FFFFFF;
+    margin-bottom: 7.2rem;
+}

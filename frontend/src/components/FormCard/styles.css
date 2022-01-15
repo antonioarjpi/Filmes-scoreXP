@@ -1,6 +1,6 @@
 .movie-form-container {
     max-width: 480px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -23,7 +23,14 @@
 }
 
 .movie-movie-card-image {
+    padding: 6px;
+    background-color: #FFFFFF;
     width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+
+.movie-movie-card-image img {
     border-radius: 8px 8px 0 0;
 }
 
@@ -41,7 +48,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     min-height: 40px;
 }
 
