@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MoviePage } from "types/movie";
 import "./styles.css"
 
@@ -8,8 +9,9 @@ type Props = {
 
 function Pagination( {page, onChange}: Props){
     return(
-        
+        <>
         <div className="movie-pagination-container">
+   
             <div className="movie-pagination-box">
                 <button className="movie-pagination-button" onClick={() => onChange(page.number - 1)} disabled={page.first} >
                 <i className="fa fa-arrow-left"></i>
@@ -20,6 +22,7 @@ function Pagination( {page, onChange}: Props){
                 </button>
             </div>
         </div>
+        </>
     )
 }
 

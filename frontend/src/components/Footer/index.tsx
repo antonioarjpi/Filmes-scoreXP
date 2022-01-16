@@ -7,7 +7,7 @@ function Footer(){
     const navigate = useNavigate();
 
     const handle = async () => {
-        navigate("/form/created");
+        navigate("/created");
     }
 
    return (

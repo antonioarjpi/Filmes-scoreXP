@@ -1,0 +1,43 @@
+
+.details{ 
+    color: rgba(255, 255, 255, 0.884);
+    max-width: 100%;
+    margin-bottom: 36.2rem;
+}
+
+.movie-movie-card-image-details {
+    border-radius: 4%;
+    opacity: 0.9;
+    max-width: 100%;
+}
+
+.button-card{
+    justify-content: left;
+    flex-direction: row;
+    display: flex; 
+    color: #fff;   
+}
+
+.btn-dark{
+    margin-right: 12px;
+    color: #fff;
+    max-width: 100%;
+    display: -ms-grid;
+    flex-direction: row;
+}
+
+.details-description h4{
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,8 @@ import { validateEmail} from 'utils/validate'
 import './styles.css';
 
 
+
+
 type Props = {
     movieId: string;
 }
@@ -44,6 +46,7 @@ function FormCard( {movieId } : Props){
                 email: email,
                 movieId: movieId,
                 score: score
+              
             }
         }
 
@@ -52,11 +55,12 @@ function FormCard( {movieId } : Props){
         });
         
     }
+    
 
     return(
-        <div className="movie-form-container">
+        <div className="movie-form-container" id='topo' >
             <img className="movie-movie-card-image" src={movie?.image}alt={movie?.title} />
-            <div className="movie-card-bottom-container">
+            <div className="movie-card-bottom-container" id='card'>
                 <h3>{movie?.title}</h3>
                 <form className="movie-form" onSubmit={handleSubmit}>
                     <div className="form-group movie-form-group">
@@ -74,12 +78,12 @@ function FormCard( {movieId } : Props){
                         </select>
                     </div>
                     <div className="movie-form-btn-container">
-                        <button type="submit" className="btn btn-primary movie-btn">Salvar</button>
+                        <button type="submit" className="btn btn-primary movie-btn" onClick={() => navigate(-1)}>Salvar</button>
                     </div>
                 </form >
 
                 <Link to="/">
-                    <button className="btn btn-primary movie-btn mt-3">Cancelar</button>
+                    <button className="btn btn-primary movie-btn mt-3" onClick={() => navigate(-1)}>Cancelar</button>
                 </Link>
                 
             </div >

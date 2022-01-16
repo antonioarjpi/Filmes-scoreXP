@@ -6,6 +6,10 @@
 
 }
 
+.movie-pagination-container button{
+    color: antiquewhite;
+}
+
 .movie-pagination-box {
     width: 180px;
     display: flex;

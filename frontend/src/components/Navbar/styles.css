@@ -40,5 +40,4 @@ header {
 .movie-contact-container:hover{
     transition:color 0.5s;
     text-decoration: none;
-    color:#c4c2cc;
 }

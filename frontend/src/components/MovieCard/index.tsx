@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Movie } from "types/movie";
 import MovieScore from "../MovieScore";
 import "./styles.css"
@@ -9,6 +9,10 @@ type Props = {
 
 function MovieCard( { movie } : Props){
 
+     window.onload = function(){
+        window.scrollTo(0,150)
+   }
+
     return(        
         <div>
             <img className="movie-movie-card-image" src={movie.image} alt={movie.title} />
@@ -17,8 +21,10 @@ function MovieCard( { movie } : Props){
                 <MovieScore count={movie.count} score={movie.score} />
 
                 <Link to={`/form/${movie.id}`}>
-                    <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+                    <a className="btn btn-primary dsmovie-btn" href="#header">Avaliar</a>
                 </Link>
+
+                    
                 
             </div>
         </div>   

@@ -56,6 +56,6 @@ public class MovieService {
 
     private void putMovie(Movie newMovie, Movie movie){
         newMovie.setTitle(movie.getTitle());
-        newMovie.setTitle(movie.getTitle());
+        newMovie.setImage(movie.getImage());
     }
 }

@@ -22,6 +22,8 @@ public class Movie {
 
     private String image;
 
+    private String sinopse;
+
     @JsonIgnore
     @OneToMany(mappedBy = "id.movie")
     private Set<Score> scores = new HashSet<>();
@@ -29,12 +31,13 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(Long id, String title, Double score, Integer count, String image) {
+    public Movie(Long id, String title, Double score, Integer count, String image, String sinopse) {
         this.id = id;
         this.title = title;
         this.score = score;
         this.count = count;
         this.image = image;
+        this.sinopse = sinopse;
     }
 
     public Long getId() {
@@ -83,5 +86,13 @@ public class Movie {
 
     public void setScores(Set<Score> scores) {
         this.scores = scores;
+    }
+
+    public String getSinopse() {
+        return sinopse;
+    }
+
+    public void setSinopse(String sinopse) {
+        this.sinopse = sinopse;
     }
 }

@@ -3,10 +3,8 @@ import CardMovie from '../../components/CardMovie'
 function CreateMovie(){
 
    
-    return(
-       
-        <CardMovie/>
-       
+    return(     
+            <CardMovie />       
     )
 }
 

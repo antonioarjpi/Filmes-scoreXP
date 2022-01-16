@@ -9,6 +9,7 @@ footer{
     border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .footer{
@@ -35,13 +36,6 @@ footer{
 
 .fa-linkedin:focus{
     color: #0A66C2; 
-}
-.fa-github:hover{
-    color: #0A66C2;
-}
-
-.fa-github:focus{
-    color: #0A66C2;
 }
 
 .fa-envelope-square:hover{

@@ -6,6 +6,7 @@ import { BASE_URL } from "utils/request";
 import { MoviePage } from "types/movie";
 import About from "components/About";
 import Paralax from "components/Paralax";
+import { Link } from "react-router-dom";
 
 
 function Listing(){
@@ -41,9 +42,14 @@ function Listing(){
     return(
         <>      
         <body>
+            
         <Paralax />
+        <div className="movie-pagination-container">
+            <Link to={`/details/`}>
+                <button className="btn movie-btn mt-3">Mudar visão</button>
+            </Link>
+            </div>
             <Pagination page={page} onChange={handlePageChange}/>
-
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
@@ -54,11 +60,7 @@ function Listing(){
                 </div>
                 <About />
             </div>
-            </body>
-            
-
-            
-            
+            </body>            
         </>
 
     )
