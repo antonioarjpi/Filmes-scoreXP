@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import simpledev.movie.dto.MovieDTO;
+import simpledev.movie.exception.NotFoundException;
 import simpledev.movie.model.Movie;
 import simpledev.movie.repository.MovieRepository;
 
@@ -18,6 +19,14 @@ public class MovieService {
 
     @Autowired
     private MovieRepository movieRepository;
+
+
+    @Transactional
+    public Movie search(Long movieId){
+        return movieRepository.findById(movieId)
+                .orElseThrow(() -> new NotFoundException("Filme não encontrado! "));
+    }
+
 
     @Transactional(readOnly = true)
     public MovieDTO findById(Long movieId){
@@ -31,5 +40,22 @@ public class MovieService {
         Page<Movie> result = movieRepository.findAll(pageable);
         Page<MovieDTO> page = result.map(x -> new MovieDTO(x));
         return page;
+    }
+
+    @Transactional
+    public Movie addMovie(Movie movie){
+        return movieRepository.save(movie);
+    }
+
+    @Transactional
+    public Movie attMovie(Movie movie){
+        Movie newMovie = search(movie.getId());
+        putMovie(newMovie, movie);
+        return movieRepository.save(movie);
+    }
+
+    private void putMovie(Movie newMovie, Movie movie){
+        newMovie.setTitle(movie.getTitle());
+        newMovie.setTitle(movie.getTitle());
     }
 }

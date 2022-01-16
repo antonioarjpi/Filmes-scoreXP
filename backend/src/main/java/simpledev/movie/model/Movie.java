@@ -1,5 +1,7 @@
 package simpledev.movie.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,11 +13,16 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+
     private Double score;
+
     private Integer count;
+
     private String image;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "id.movie")
     private Set<Score> scores = new HashSet<>();
 

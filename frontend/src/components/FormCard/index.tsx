@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BASE_URL } from 'utils/request';
 import { Movie } from '../../types/movie';
-import { validateEmail } from 'utils/validate'
+import { validateEmail} from 'utils/validate'
 
 import './styles.css';
 

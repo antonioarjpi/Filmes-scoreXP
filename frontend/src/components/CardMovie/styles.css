@@ -1,0 +1,55 @@
+.movie-form-container {
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.movie-form {
+    margin-top: 2.1rem;
+    width: calc(100% - 20px);
+}
+
+.movie-form-group {
+    margin-bottom: 20px;
+}
+
+.movie-form-group label {
+    font-size: 15px;
+    color: rgba(14, 13, 13, 0.658);
+}
+
+.movie-form-group a {
+    font-size: 10px;
+    color: rgb(55, 113, 146);
+}
+
+.movie-form-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.movie-movie-card-image {
+    padding: 6px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+
+.movie-movie-card-image img {
+    border-radius: 8px 8px 0 0;
+}
+
+.movie-card-bottom-container-btn {
+    padding-top: 80px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+
+
+
