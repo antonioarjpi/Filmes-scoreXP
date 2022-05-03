@@ -9,9 +9,7 @@
     background-position: center top;
     display: grid;
     align-items: center;
-
     background-size: cover;
-  
 }
 
 .title{
@@ -27,12 +25,11 @@
 
 .sub-title{
     font-size: 35px;
-   
     text-decoration: none solid rgb(255, 255, 255);
     text-align: center;
     word-spacing: 0px;
     background-position: 0% 0%;
     color:  #FFFFFF;
-    margin-bottom: 30.1rem;
+    margin-bottom: 10.1rem;
 }
 

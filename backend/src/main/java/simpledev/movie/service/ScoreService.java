@@ -13,7 +13,6 @@ import simpledev.movie.repository.MovieRepository;
 import simpledev.movie.repository.ScoreRepository;
 import simpledev.movie.repository.UserRepository;
 
-
 @RestController
 @AllArgsConstructor
 public class ScoreService {
@@ -60,6 +59,5 @@ public class ScoreService {
         return new MovieDTO(movie);
 
     }
-
 
 }

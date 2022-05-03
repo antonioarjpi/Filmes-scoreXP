@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .movie-pagination-container button{
@@ -35,7 +34,6 @@
     cursor: pointer;
     background-color: var(--color-primary);
     color: #fff;
-    
 }
 
 .movie-pagination-button:disabled {

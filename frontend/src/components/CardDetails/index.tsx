@@ -7,7 +7,6 @@ type Props = {
     movie: Movie;
 }
 
-
 function CardDetails( { movie } : Props){
 
     return(        
@@ -36,7 +35,6 @@ function CardDetails( { movie } : Props){
                 </div>
                 </div>        
         </>
-  
     )
 
 }

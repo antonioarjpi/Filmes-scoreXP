@@ -1,7 +1,12 @@
 package simpledev.movie.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import simpledev.movie.model.Movie;
 
+@Data @AllArgsConstructor @NoArgsConstructor @Builder
 public class MovieDTO {
 
     private Long id;
@@ -11,20 +16,6 @@ public class MovieDTO {
     private String image;
     private String sinopse;
 
-
-    public MovieDTO() {
-    }
-
-    public MovieDTO(Long id, String title, Double score, Integer count, String image) {
-        this.id = id;
-        this.title = title;
-        this.score = score;
-        this.count = count;
-        this.image = image;
-        this.sinopse = sinopse;
-
-    }
-
     public MovieDTO(Movie movie) {
         this.id = movie.getId();
         this.title = movie.getTitle();
@@ -32,53 +23,5 @@ public class MovieDTO {
         this.count = movie.getCount();
         this.image = movie.getImage();
         this.sinopse = movie.getSinopse();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Double getScore() {
-        return score;
-    }
-
-    public void setScore(Double score) {
-        this.score = score;
-    }
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getSinopse() {
-        return sinopse;
-    }
-
-    public void setSinopse(String sinopse) {
-        this.sinopse = sinopse;
     }
 }

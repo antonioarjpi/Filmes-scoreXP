@@ -1,11 +1,11 @@
 import CardMovie from '../../components/CardMovie'
 
 function CreateMovie(){
-
-   
+    
     return(     
-            <CardMovie />       
+        <CardMovie />       
     )
+    
 }
 
 export default CreateMovie;

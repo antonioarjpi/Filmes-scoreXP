@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Movie } from "types/movie";
 import MovieScore from "../MovieScore";
 import "./styles.css"
@@ -23,8 +23,6 @@ function MovieCard( { movie } : Props){
                 <Link to={`/form/${movie.id}`}>
                     <a className="btn btn-primary dsmovie-btn" href="#header">Avaliar</a>
                 </Link>
-
-                    
                 
             </div>
         </div>   

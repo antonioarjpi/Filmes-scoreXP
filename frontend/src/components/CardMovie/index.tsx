@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../../utils/request';
 import './styles.css';
 
-
 function CardMovie(){
 
     const navigate = useNavigate();

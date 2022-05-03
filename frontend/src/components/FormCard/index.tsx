@@ -1,14 +1,11 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from 'utils/request';
 import { Movie } from '../../types/movie';
 import { validateEmail} from 'utils/validate'
 
 import './styles.css';
-
-
-
 
 type Props = {
     movieId: string;
@@ -26,7 +23,6 @@ function FormCard( {movieId } : Props){
                 setMovie(response.data);
             });
     }, [movieId]);
-
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -56,7 +52,6 @@ function FormCard( {movieId } : Props){
         
     }
     
-
     return(
         <div className="movie-form-container" id='topo' >
             <img className="movie-movie-card-image" src={movie?.image}alt={movie?.title} />

@@ -11,7 +11,6 @@ function Pagination( {page, onChange}: Props){
     return(
         <>
         <div className="movie-pagination-container">
-   
             <div className="movie-pagination-box">
                 <button className="movie-pagination-button" onClick={() => onChange(page.number - 1)} disabled={page.first} >
                 <i className="fa fa-arrow-left"></i>

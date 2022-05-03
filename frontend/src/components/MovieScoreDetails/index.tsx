@@ -11,7 +11,6 @@ function MovieScoreDetails( { score } : Props ){
         <div className="movie-score-container">
             <p className="movie-score-value-details">{score > 0 ? score.toFixed(1) : '-'}</p>
             <MovieStars score={score}/>
-         
         </div>
     )
 }

@@ -6,8 +6,6 @@ import { BASE_URL } from "../../utils/request";
 import { MoviePage } from "../../types/movie";
 import { Link } from "react-router-dom";
 import Paralax from "components/Paralax";
-import About from "components/About";
-
 
 function Details(){
     
@@ -30,7 +28,6 @@ function Details(){
         .then(response => {
             const data = response.data as MoviePage;
             setPage(data);
-            
         })
     }, [pageNumber]);
 
@@ -39,27 +36,25 @@ function Details(){
     }  
     
     return(   
-        <>    
-        
+        <>           
         <Paralax />
         <div className="movie-pagination-container">
             <Link to={`/`}>
                 <button className="btn movie-btn mt-3">Mudar visão</button>
             </Link>
-            </div>
+        </div>
         <body>
             <Pagination page={page} onChange={handlePageChange}/>
-                    {page.content.map(movie => (
-                        <>
-                                <div key={movie.id} className="">
-                                    <CardDetails  movie={movie}  />
-                                </div>
-                        </>
+                {page.content.map(movie => (
+                    <>
+                        <div key={movie.id} className="">
+                            <CardDetails  movie={movie}  />
+                        </div>
+                    </>
 
-                    ))}  
+                ))}  
  
-            </body>     
-                
+        </body>           
         </>
 
     )

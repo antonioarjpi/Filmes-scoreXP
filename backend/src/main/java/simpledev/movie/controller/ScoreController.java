@@ -9,15 +9,12 @@ import simpledev.movie.dto.MovieDTO;
 import simpledev.movie.dto.ScoreDTO;
 import simpledev.movie.service.ScoreService;
 
-
-
 @RestController
 @RequestMapping("/scores")
 public class ScoreController {
 
     @Autowired
     private ScoreService scoreService;
-
 
     @PutMapping
     public MovieDTO saveScore(@RequestBody ScoreDTO scoreId){

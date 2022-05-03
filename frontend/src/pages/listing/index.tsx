@@ -30,7 +30,6 @@ function Listing(){
         .then(response => {
             const data = response.data as MoviePage;
             setPage(data);
-            console.log(data)
         })
     }, [pageNumber]);
 
@@ -38,16 +37,14 @@ function Listing(){
         setPageNumber(newPageNumber);
     }
 
-    
     return(
         <>      
         <body>
-            
-        <Paralax />
-        <div className="movie-pagination-container">
-            <Link to={`/details/`}>
-                <button className="btn movie-btn mt-3">Mudar visão</button>
-            </Link>
+            <Paralax />
+            <div className="movie-pagination-container">
+                <Link to={`/details/`}>
+                    <button className="btn movie-btn mt-3">Mudar visão</button>
+                </Link>
             </div>
             <Pagination page={page} onChange={handlePageChange}/>
             <div className="container">
@@ -60,7 +57,7 @@ function Listing(){
                 </div>
                 <About />
             </div>
-            </body>            
+        </body>            
         </>
 
     )

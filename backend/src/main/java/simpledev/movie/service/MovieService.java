@@ -1,6 +1,5 @@
 package simpledev.movie.service;
 
-
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,7 +10,6 @@ import simpledev.movie.dto.MovieDTO;
 import simpledev.movie.exception.NotFoundException;
 import simpledev.movie.model.Movie;
 import simpledev.movie.repository.MovieRepository;
-
 
 @Service
 @AllArgsConstructor
@@ -26,7 +24,6 @@ public class MovieService {
         return movieRepository.findById(movieId)
                 .orElseThrow(() -> new NotFoundException("Filme não encontrado! "));
     }
-
 
     @Transactional(readOnly = true)
     public MovieDTO findById(Long movieId){

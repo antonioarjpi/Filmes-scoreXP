@@ -1,11 +1,14 @@
 package simpledev.movie.model;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Embeddable
+@NoArgsConstructor
 public class ScorePK implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -16,9 +19,6 @@ public class ScorePK implements Serializable {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-
-    public ScorePK() {
-    }
 
     public Movie getMovie() {
         return movie;
