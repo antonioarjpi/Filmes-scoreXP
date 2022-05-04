@@ -1,5 +1,7 @@
 package simpledev.movie.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_score")
-@Data @NoArgsConstructor
+@Data @NoArgsConstructor @Builder @AllArgsConstructor
 public class Score {
 
     @EmbeddedId
