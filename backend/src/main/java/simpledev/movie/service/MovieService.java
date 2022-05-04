@@ -22,7 +22,7 @@ public class MovieService {
     @Transactional
     public Movie search(Long movieId){
         return movieRepository.findById(movieId)
-                .orElseThrow(() -> new NotFoundException("Filme não encontrado! "));
+                .orElseThrow(() -> new NotFoundException("Filme não enfcontrado! "));
     }
 
     @Transactional(readOnly = true)
