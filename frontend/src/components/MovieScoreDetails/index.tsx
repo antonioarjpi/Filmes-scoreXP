@@ -2,15 +2,14 @@ import MovieStars from "../MovieStars";
 import "./styles.css"
 
 type Props = {
-    score: number; 
+    score: number;
 }
 
-function MovieScoreDetails( { score } : Props ){
-
-    return(
-        <div className="movie-score-container">
+function MovieScoreDetails({ score }: Props) {
+    return (
+        <div className="movie-score-container mb-4">
             <p className="movie-score-value-details">{score > 0 ? score.toFixed(1) : '-'}</p>
-            <MovieStars score={score}/>
+            <MovieStars score={score} />
         </div>
     )
 }

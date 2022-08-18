@@ -1,0 +1,24 @@
+.movie-size{
+    width: 19.12rem;
+    height: 152.141px;
+}
+
+.movie-card-bottom-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+    border-radius: 0 0 8px 8px;
+    height: 185px;
+   
+}
+
+.movie-movie-card-image {
+    padding: 6px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: 152.141px;
+    
+}

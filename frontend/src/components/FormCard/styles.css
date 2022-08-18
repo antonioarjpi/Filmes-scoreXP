@@ -22,19 +22,18 @@
     justify-content: center;
 }
 
-.movie-movie-card-image {
+.movie-form-card-image {
     padding: 6px;
     background-color: #FFFFFF;
     width: 100%;
     border-radius: 8px 8px 0 0;
 }
 
-
 .movie-movie-card-image img {
     border-radius: 8px 8px 0 0;
 }
 
-.movie-card-bottom-container {
+.movie-form-bottom-container {
     background-color: #fff;
     display: flex;
     flex-direction: column;

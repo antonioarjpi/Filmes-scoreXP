@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from 'utils/request';
 import { Movie } from '../../types/movie';
-import { validateEmail} from 'utils/validate'
+import { validateEmail } from 'utils/validate'
 
 import './styles.css';
 
@@ -11,10 +11,9 @@ type Props = {
     movieId: string;
 }
 
-function FormCard( {movieId } : Props){
+function FormCard({ movieId }: Props) {
 
     const navigate = useNavigate();
-
     const [movie, setMovie] = useState<Movie>();
 
     useEffect(() => {
@@ -30,7 +29,7 @@ function FormCard( {movieId } : Props){
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
 
-        if (!validateEmail(email)){
+        if (!validateEmail(email)) {
             return;
         }
 
@@ -42,20 +41,19 @@ function FormCard( {movieId } : Props){
                 email: email,
                 movieId: movieId,
                 score: score
-              
+
             }
         }
 
         axios(config).then(response => {
             navigate("/")
         });
-        
     }
-    
-    return(
+
+    return (
         <div className="movie-form-container" id='topo' >
-            <img className="movie-movie-card-image" src={movie?.image}alt={movie?.title} />
-            <div className="movie-card-bottom-container" id='card'>
+            <img className="movie-form-card-image" src={movie?.image} alt={movie?.title} />
+            <div className="movie-form-bottom-container" id='card'>
                 <h3>{movie?.title}</h3>
                 <form className="movie-form" onSubmit={handleSubmit}>
                     <div className="form-group movie-form-group">
@@ -76,11 +74,9 @@ function FormCard( {movieId } : Props){
                         <button type="submit" className="btn btn-primary movie-btn" onClick={() => navigate(-1)}>Salvar</button>
                     </div>
                 </form >
-
                 <Link to="/">
                     <button className="btn btn-primary movie-btn mt-3" onClick={() => navigate(-1)}>Cancelar</button>
                 </Link>
-                
             </div >
         </div >
     )

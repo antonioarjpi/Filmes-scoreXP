@@ -1,14 +1,13 @@
-import { ReactComponentElement } from "react";
 import Logo from 'assets/img/Logo.png'
 import "./styles.css"
 
-function Navbar(){
-    return(
+function Navbar() {
+    return (
         <header>
             <nav className="container">
                 <div className="movie-nav-content">
                     <a href="/">
-                        <img src={Logo}  alt="fireSpot"/>
+                        <img src={Logo} alt="fireSpot" />
                     </a>
                     <a href="https://github.com/antonioarjpi" target="_blank" rel="noreferrer">
                         <div className="movie-contact-container">
@@ -18,7 +17,7 @@ function Navbar(){
                     </a>
                 </div>
             </nav>
-        </header>    
+        </header>
     )
 }
 

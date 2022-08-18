@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../../utils/request';
 import './styles.css';
 
-function CardMovie(){
+function CardMovie() {
 
     const navigate = useNavigate();
 
@@ -30,39 +30,33 @@ function CardMovie(){
         axios(config).then(response => {
             navigate("/")
         });
-        
+
     }
 
-    return(
+    return (
         <div className="movie-form-container">
-
             <div className="movie-card-bottom-container-btn">
                 <form className="movie-form" onSubmit={handleSubmit}>
                     <div className="form-group movie-form-group">
                         <label htmlFor="title">Nome do filme</label>
                         <input type="text" className="form-control" id="title" />
                     </div>
-
                     <div className="form-group movie-form-group">
                         <label htmlFor="sinopse">Sinopse</label>
                         <input type="text" className="form-control" id="sinopse" />
                     </div>
-
                     <div className="form-group movie-form-group">
                         <label htmlFor="image">Link da image</label>
                         <input className="form-control" id="image" />
                         <a href='https://www.themoviedb.org/' target={"_blank"}>Não sabe onde encontrar? </a>
                     </div>
-
                     <div className="movie-form-btn-container">
                         <button type="submit" className="btn btn-primary movie-btn" onClick={() => navigate(-1)}>Salvar</button>
                     </div>
                 </form >
-
                 <Link to="/">
                     <button className="btn btn-primary movie-btn mt-3" onClick={() => navigate(-1)}>Cancelar</button>
                 </Link>
-                
             </div >
         </div >
     )
