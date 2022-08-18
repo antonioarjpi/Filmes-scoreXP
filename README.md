@@ -1,9 +1,11 @@
-# Sobre o projeto
+# ⚡ Filmes ScoreXP
 
-#### Aplicação consiste em dois casos de usos (listagem paginada de todos os filmes e avaliação de filmes). Projeto full-stack com back-end Java e spring integrado ao banco de dados PostgreSQL e no front-end utilizado React JS.
+<div align='center'>
+  <img src='https://github.com/antonioarjpi/Filmes-scoreXP/blob/main/frontend/src/assets/img/filmesscore.gif'/>
+</div>
 
-##### Prévia:
-![Movie](https://github.com/antonioarjpi/Movie/blob/main/frontend/src/assets/img/movie.gif)
+# 📄 Sobre o projeto
+#### A aplicação simula uma base de dados online sobre filmes, no qual o usuário verá os filmes mais bem avaliados. O site também contém lista paginada contendo o título, nota e quantidades avaliações do filmes dadas por usuários com e-mail diferente, se o mesmo usuário avaliar o mesmo filme mais de uma vez irá contar apenas a última nota. O sistema também possui cadastro de filme onde deve inserir o nome, sinopse e uma url de imagem.
 
 ## Tecnologias utilizadas
 
