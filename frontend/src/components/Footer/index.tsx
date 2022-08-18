@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useNavigate } from 'react-router-dom';
 import './styles.css'
 
@@ -14,16 +15,16 @@ function Footer() {
             <div className='container'>
                 <p className="font-bold title-footer">Precisa de ajuda?</p>
                 <a onClick={handle} type="button">Não tem o filme? Cadastre :)</a><br />
-                <a href="#" className="font-footer">Central de ajuda</a><br />
-                <a href="#" className="font-footer font-footer">Canais de atendimento</a><br />
-                <a href="#" className="font-footer ">Canais de atendimento</a><br />
-                <a href="#" className="font-footer">Ouvidoria</a><br />
+                <a href="/#" className="font-footer">Central de ajuda</a><br />
+                <a href="/#" className="font-footer font-footer">Canais de atendimento</a><br />
+                <a href="/#" className="font-footer ">Canais de atendimento</a><br />
+                <a href="/#" className="font-footer">Ouvidoria</a><br />
             </div>
             <div className='container'>
                 <p className="font-bold title-footer">Fale comigo</p>
-                <a href="#" className="font-footer">Filmes ScoreXP</a><br />
-                <a href="#" className="font-footer font-footer">Tel 86 99427-3871</a><br />
-                <a href="#" className="font-footer ">Email antonioarjpi@gmail.com</a><br />
+                <a href="/#" className="font-footer">Filmes ScoreXP</a><br />
+                <a href="/#" className="font-footer font-footer">Tel 86 99427-3871</a><br />
+                <a href="/#" className="font-footer ">Email antonioarjpi@gmail.com</a><br />
                 <a href="#" className="font-footer">Ouvidoria</a><br />
             </div>
             <div className='container'>

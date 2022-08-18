@@ -32,10 +32,10 @@ function getFills(score: number) {
 
 function Star({ fill }: StarProps) {
 
-    if (fill == 0) {
+    if (fill === 0) {
         return <i className="fa fa-star-o" aria-hidden="true"></i>
     }
-    else if (fill = 1) {
+    else if (fill === 1) {
         return <i className="fa fa-star" aria-hidden="true"></i>
     }
     else {

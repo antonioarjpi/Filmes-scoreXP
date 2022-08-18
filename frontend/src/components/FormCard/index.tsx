@@ -1,10 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from 'utils/request';
 import { Movie } from '../../types/movie';
 import { validateEmail } from 'utils/validate'
-
+import { ToastContainer, toast } from 'react-toastify';
 import './styles.css';
 
 type Props = {
@@ -13,8 +13,9 @@ type Props = {
 
 function FormCard({ movieId }: Props) {
 
-    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     const [movie, setMovie] = useState<Movie>();
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`${BASE_URL}/movies/${movieId}`)
@@ -23,15 +24,18 @@ function FormCard({ movieId }: Props) {
             });
     }, [movieId]);
 
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
 
         if (!validateEmail(email)) {
-            return;
+            toast.error('Digite um e-mail válido!');
+            throw new Error("");
         }
+
+        setLoading(true);
 
         const config: AxiosRequestConfig = {
             baseURL: BASE_URL,
@@ -41,17 +45,32 @@ function FormCard({ movieId }: Props) {
                 email: email,
                 movieId: movieId,
                 score: score
-
             }
         }
-
-        axios(config).then(response => {
-            navigate("/")
+        axios(config).then(() => {
+            toast.success('Filme avaliado com sucesso');
+            setTimeout(() => {
+                setLoading(false)
+                navigate(-1)
+            }, 2000)
+        }).catch((error) => {
+            setLoading(false)
+            throw new Error(error.toString());
         });
     }
 
     return (
         <div className="movie-form-container" id='topo' >
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                draggable
+                theme='dark'
+            />
+
             <img className="movie-form-card-image" src={movie?.image} alt={movie?.title} />
             <div className="movie-form-bottom-container" id='card'>
                 <h3>{movie?.title}</h3>
@@ -71,7 +90,11 @@ function FormCard({ movieId }: Props) {
                         </select>
                     </div>
                     <div className="movie-form-btn-container">
-                        <button type="submit" className="btn btn-primary movie-btn" onClick={() => navigate(-1)}>Salvar</button>
+                        <button className="btn btn-primary movie-btn" type="submit" disabled={loading}>
+                            Salvar {loading ?
+                                <span style={{ marginLeft: '2px' }} className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : ''}
+                        </button>
+                        {/* <button type="submit" className="btn btn-primary movie-btn">Salvar</button> */}
                     </div>
                 </form >
                 <Link to="/">
